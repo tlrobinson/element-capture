@@ -1,0 +1,28 @@
+{
+    "name": "Element Capture",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Screen capture any element on a webpage.",
+    "page_action": {
+        "default_icon": "icon48.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentscript.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
