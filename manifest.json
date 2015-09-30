@@ -7,9 +7,7 @@
         "default_icon": "icon48.png"
     },
     "permissions": [
-        "tabs",
-        "http://*/",
-        "https://*/"
+	    "activeTab"
     ],
     "background": {
         "scripts": ["background.js"]
